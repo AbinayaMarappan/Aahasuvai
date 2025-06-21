@@ -2,11 +2,16 @@
   "name": "aahasuvai",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://abinayamarappan.github.io/Aahasuvai",
+
   "scripts": {
     "dev": "set NODE_ENV=development && tsx server/index.ts",
     "start": "set NODE_ENV=production && tsx server/index.ts",
     "build": "vite build --config vite.config.ts",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -34,6 +39,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "framer-motion": "^10.16.4",
+    "gh-pages": "^6.3.0",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.292.0",
     "react": "^18.2.0",
