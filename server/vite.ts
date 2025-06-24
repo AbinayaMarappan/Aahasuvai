@@ -70,7 +70,7 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve("dist", "public");
+  const distPath = path.resolve("dist");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
@@ -78,17 +78,11 @@ export function serveStatic(app: Express) {
     );
   }
 
-  // Serve static files from dist/public
   app.use(express.static(distPath));
 
-  // Fall through to index.html for React routing
   app.get("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
-  app.get("*", (_req, res) => {
-  console.log("⚡ Fallback route hit");
-  res.sendFile(path.join(__dirname, "../dist/public/index.html"));
-});
 
-  log("Static files served from dist/public");
+  log("Static files served from dist");
 }
