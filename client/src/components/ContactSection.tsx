@@ -60,87 +60,88 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-rich-brown mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Have questions about our products or want to place a bulk order? We'd love to hear from you!</p>
-        </div>
+   <section id="contact" className="py-20 bg-[#004d3d]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#fff6e7] mb-4">Get In Touch</h2>
+      <p className="text-xl text-[#fff6e7] opacity-90 max-w-3xl mx-auto">
+        Have questions about our products or want to place a bulk order? We'd love to hear from you!
+      </p>
+    </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h3 className="font-playfair text-2xl font-semibold text-rich-brown mb-8">Contact Information</h3>
-            
-            <div className="space-y-6">
-              {/* Address */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-spice-orange rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-map-marker-alt text-white"></i>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-rich-brown mb-1">Address</h4>
-                  <p className="text-gray-600">123 Spice Market Street<br />Tamil Nadu 600001<br />India</p>
-                </div>
-              </div>
+    <div className="grid lg:grid-cols-2 gap-12">
+      {/* Contact Information */}
+      <div>
+        <h3 className="font-playfair text-2xl font-semibold text-[#fff6e7] mb-8">Contact Information</h3>
 
-              {/* Phone */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-spice-orange rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-phone text-white"></i>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-rich-brown mb-1">Phone</h4>
-                  <p className="text-gray-600">+91 44 2345 6789<br />+91 98765 43210</p>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-spice-orange rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-envelope text-white"></i>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-rich-brown mb-1">Email</h4>
-                  <p className="text-gray-600">aahasuvai.com<br />orders@aahasuvai.com</p>
-                </div>
-              </div>
-
-              {/* Business Hours */}
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-spice-orange rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-clock text-white"></i>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-rich-brown mb-1">Business Hours</h4>
-                  <p className="text-gray-600">Monday - Saturday: 9:00 AM - 7:00 PM<br />Sunday: 10:00 AM - 5:00 PM</p>
-                </div>
-              </div>
+        <div className="space-y-6 text-[#fff6e7]">
+          {/* Address */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#fff6e7] rounded-full flex items-center justify-center flex-shrink-0">
+              <i className="fas fa-map-marker-alt text-[#004d3d]"></i>
             </div>
-
-            {/* Social Media */}
-            <div className="mt-8">
-              <h4 className="font-semibold text-rich-brown mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors">
-                  <i className="fab fa-youtube"></i>
-                </a>
-                <a href="#" className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white hover:bg-green-700 transition-colors">
-                  <i className="fab fa-whatsapp"></i>
-                </a>
-              </div>
+            <div>
+              <h4 className="font-semibold text-[#fff6e7] mb-1">Address</h4>
+              <p className="opacity-90">123 Spice Market Street<br />Tamil Nadu 600001<br />India</p>
             </div>
           </div>
 
+          {/* Phone */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#fff6e7] rounded-full flex items-center justify-center flex-shrink-0">
+              <i className="fas fa-phone text-[#004d3d]"></i>
+            </div>
+            <div>
+              <h4 className="font-semibold text-[#fff6e7] mb-1">Phone</h4>
+              <p className="opacity-90">+91 44 2345 6789<br />+91 98765 43210</p>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#fff6e7] rounded-full flex items-center justify-center flex-shrink-0">
+              <i className="fas fa-envelope text-[#004d3d]"></i>
+            </div>
+            <div>
+              <h4 className="font-semibold text-[#fff6e7] mb-1">Email</h4>
+              <p className="opacity-90">aahasuvai.com<br />orders@aahasuvai.com</p>
+            </div>
+          </div>
+
+          {/* Hours */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#fff6e7] rounded-full flex items-center justify-center flex-shrink-0">
+              <i className="fas fa-clock text-[#004d3d]"></i>
+            </div>
+            <div>
+              <h4 className="font-semibold text-[#fff6e7] mb-1">Business Hours</h4>
+              <p className="opacity-90">Mon - Sat: 9:00 AM - 7:00 PM<br />Sun: 10:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Icons */}
+        <div className="mt-8">
+          <h4 className="font-semibold text-[#fff6e7] mb-4">Follow Us</h4>
+          <div className="flex space-x-4">
+            <a href="#" className="w-10 h-10 bg-[#fff6e7] rounded-full flex items-center justify-center text-[#004d3d] hover:bg-[#e6dccf] transition-colors">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" className="w-10 h-10 bg-[#fff6e7] rounded-full flex items-center justify-center text-[#004d3d] hover:bg-[#e6dccf] transition-colors">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#" className="w-10 h-10 bg-[#fff6e7] rounded-full flex items-center justify-center text-[#004d3d] hover:bg-[#e6dccf] transition-colors">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="#" className="w-10 h-10 bg-[#fff6e7] rounded-full flex items-center justify-center text-[#004d3d] hover:bg-[#e6dccf] transition-colors">
+              <i className="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="font-playfair text-2xl font-semibold text-rich-brown mb-6">Send us a Message</h3>
+         <div className="bg-[#fff6e7] rounded-2xl shadow-lg p-8">
+        <h3 className="font-playfair text-2xl font-semibold text-[#004d3d] mb-6">Send us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
@@ -218,8 +219,7 @@ export default function ContactSection() {
               {/* Submit Button */}
               <Button 
                 type="submit" 
-                className="w-full bg-spice-orange hover:bg-deep-amber text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
-              >
+                className="w-full bg-[#004d3d] hover:bg-[#006d5d] text-[#fff6e7] py-3 px-6 rounded-lg font-semibold">
                 <i className="fas fa-paper-plane mr-2"></i>Send Message
               </Button>
             </form>

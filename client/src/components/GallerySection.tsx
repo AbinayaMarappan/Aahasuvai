@@ -35,24 +35,31 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="py-20 masala-gradient">
+    <section id="gallery" className="py-20 bg-[#004d3d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">Spice Gallery</h2>
-          <p className="text-xl text-white opacity-90 max-w-3xl mx-auto">Feast your eyes on the vibrant colors and textures of our premium spice collection</p>
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#fff6e7] mb-4">
+            Spice Gallery
+          </h2>
+          <p className="text-xl text-[#fff6e7] opacity-90 max-w-3xl mx-auto">
+            Feast your eyes on the vibrant colors and textures of our premium spice collection
+          </p>
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((image, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <img 
-                src={image.src} 
-                alt={image.alt} 
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" 
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-[#fff6e7]"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                <i className="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+              <div className="absolute inset-0 bg-[#004d3d] bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <i className="fas fa-expand text-[#fff6e7] text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
               </div>
             </div>
           ))}

@@ -1,44 +1,81 @@
+import React, { useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import slider1 from '@/assets/slider1.jpg';
+import slider2 from '@/assets/Slider4.jpg';
+import slider3 from '@/assets/Slider5.jpg';
+
+import leaf1 from '@/assets/leaf1.jpg';
+import leaf2 from '@/assets/leaf2.avif';
+import leaf3 from '@/assets/leaf3.jpeg';
+
+const images = [slider1, slider2, slider3];
+
 export default function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    const isFirst = currentIndex === 0;
+    const newIndex = isFirst ? images.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLast = currentIndex === images.length - 1;
+    const newIndex = isLast ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with colorful spices in wooden bowls */}
-      <div 
-        className="absolute inset-0 parallax-bg" 
-        style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')" 
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      </div>
-      
-      {/* Hero Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Authentic Indian <span className="text-yellow-400">Spices</span>
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Experience the rich heritage of traditional Indian flavors with our premium quality masala blends and aromatic spices
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <button className="bg-spice-orange hover:bg-deep-amber text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-            <i className="fas fa-shopping-cart mr-2"></i>Shop Now
-          </button>
-          <button className="border-2 border-white text-white hover:bg-white hover:text-spice-orange px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-            <i className="fas fa-play mr-2"></i>Our Story
-          </button>
-        </div>
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Image */}
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+      />
+
+      {/* Overlay */}
+      <div className="w-full h-full object-cover"></div>
+
+      {/* Arrows */}
+      <div className="absolute z-20 inset-0 flex items-center justify-between px-6">
+        <button
+          onClick={goToPrevious}
+          className="text-white text-3xl p-3 bg-black bg-opacity-0 rounded-full hover:bg-opacity-60 transition"
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          onClick={goToNext}
+          className="text-white text-3xl p-3 bg-black bg-opacity-0 rounded-full hover:bg-opacity-60 transition"
+        >
+          <FaArrowRight />
+        </button>
       </div>
 
-      {/* Floating Spice Elements */}
-      <div className="absolute top-20 left-10 animate-float" style={{ animationDelay: '0s' }}>
-        <div className="w-16 h-16 bg-yellow-400 rounded-full opacity-20"></div>
+     {/* Animated Floating Leaves */}
+     {/*
+      <div className="absolute top-24 left-10 animate-float">
+        <img
+          src="leaf1"
+          alt="Leaf 1"
+          className="w-12 h-12 opacity-20"30
+        />
       </div>
-      <div className="absolute top-32 right-20 animate-float" style={{ animationDelay: '1s' }}>
-        <div className="w-12 h-12 bg-red-500 rounded-full opacity-20"></div>
+      <div className="absolute bottom-28 right-12 animate-float delay-1000">
+        <img
+          src="leaf2"
+          alt="Leaf 2"
+          className="w-16 h-16 opacity-20"
+        />
       </div>
-      <div className="absolute bottom-32 left-32 animate-float" style={{ animationDelay: '2s' }}>
-        <div className="w-20 h-20 bg-orange-500 rounded-full opacity-20"></div>
-      </div>
+      <div className="absolute top-40 right-40 animate-float delay-2000">
+        <img
+          src="leaf3"
+          alt="Leaf 3"
+          className="w-10 h-10 opacity-20"
+        />
+      </div> */}
     </section>
   );
 }
