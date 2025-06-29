@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import slider1 from '@/assets/slider1.jpg';
+import slider1 from '@/assets/Slider1.jpg';
 import slider2 from '@/assets/Slider4.jpg';
 import slider3 from '@/assets/Slider5.jpg';
 
