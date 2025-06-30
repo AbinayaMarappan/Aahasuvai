@@ -20,7 +20,8 @@ export default function OffersPage() {
   };
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    // <div className="p-6 max-w-7xl mx-auto">
+    <div className="p-6 max-w-7xl mx-auto bg-beige min-h-screen">
       <h1 className="text-4xl font-bold text-center mb-10 text-[#004d3d]">🔥 Exclusive Offers Just for You!</h1>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
